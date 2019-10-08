@@ -60,11 +60,11 @@ struct UpperContent : View {
                 VStack(alignment: .leading) {
                     Text("This Week")
                         .font(.title)
-                        .color(Color("Grey4"))
+                        .foregroundColor(Color("Grey4"))
                     Text("July 2 - 9")
                         .font(.subheadline)
                         .fontWeight(.bold)
-                        .color(Color("Purple1"))
+                        .foregroundColor(Color("Purple1"))
                 }
                 Spacer()
                 Image("ProfilePhoto-Meghan")
@@ -75,16 +75,15 @@ struct UpperContent : View {
             Group {
                 Text("“Since it’s a holiday weekend, there will only be two classes instead of three. It’ll be a great week, friends!”")
                     .italic()
-                    .color(Color("Grey3"))
+                    .foregroundColor(Color("Grey3"))
                     .lineLimit(100)
-                    .frame(minHeight: 75, maxHeight: .infinity)
+                    .frame(minHeight: 75, maxHeight: 150)
             }
             .padding(.horizontal, 20)
                 .padding(.vertical, 16)
                 .border(Color("Grey1"), width: 2)
                 .cornerRadius(12)
                 .zIndex(-100.0)
-            
             
             // The goods from this week
             HStack {
@@ -96,7 +95,7 @@ struct UpperContent : View {
                         .imageScale(.small)
                     Text("2 Classes")
                         .font(.caption)
-                        .color(Color("Grey3"))
+                        .foregroundColor(Color("Grey3"))
                 }
                 .padding(.trailing, 8)
                 
@@ -107,7 +106,7 @@ struct UpperContent : View {
                         .imageScale(.small)
                     Text("1 Playlist")
                         .font(.caption)
-                        .color(Color("Grey3"))
+                        .foregroundColor(Color("Grey3"))
                 }
                 .padding(.trailing, 8)
                 
@@ -118,7 +117,7 @@ struct UpperContent : View {
                         .imageScale(.small)
                     Text("1 Quote")
                         .font(.caption)
-                        .color(Color("Grey3"))
+                        .foregroundColor(Color("Grey3"))
                 }
                 Spacer()
             }
@@ -138,7 +137,7 @@ struct ClassesScrollViewSection : View {
                 Text("Classes this week")
                     .font(.title)
                     .fontWeight(.regular)
-                    .color(Color("Grey3"))
+                    .foregroundColor(Color("Grey3"))
                 Spacer()
             }
             .padding(.horizontal, 32)

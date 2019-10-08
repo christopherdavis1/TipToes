@@ -9,17 +9,21 @@
 import SwiftUI
 
 struct Home : View {
+    
+    @State var showContentView = false
+    
     var body: some View {
-        
-        PresentationLink(destination: ContentView()) {
+        Button(action: {self.showContentView.toggle() }) {
             VStack {
                 Text("Launch Week View")
                     .font(.callout)
-                    .color(.white)
+                    .foregroundColor(.white)
                     .padding()
                     .padding(.horizontal)
                     .background(Color.blue)
                     .cornerRadius(8)
+            }.sheet(isPresented: self.$showContentView) {
+                ContentView()
             }
         }
     }

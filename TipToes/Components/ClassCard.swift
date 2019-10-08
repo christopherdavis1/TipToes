@@ -9,15 +9,23 @@
 import SwiftUI
 
 struct ClassCard : View {
+    
+    @State var ShowClassCard = false
+    
     var body: some View {
         
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 16.0) {
                 ForEach(0 ..< 3) { item in
-                    PresentationLink(destination: ClassDetailView()) {
+                    
+                    Button(action: { self.ShowClassCard.toggle() }) {
                         SingleClassCard()
                     }
-                }
+                    
+//                    PresentationLink(destination: ClassDetailView()) {
+//                        SingleClassCard()
+//                    }
+                }.sheet(isPresented: $ShowClassCard) { ClassDetailView() }
             }
             .padding(.leading, 32)
             .padding(.trailing)
@@ -51,11 +59,11 @@ struct SingleClassCard : View {
             VStack(alignment: .leading) {
                 
                 Text("Teaching Barre at:")
-                    .color(.black)
+                    .foregroundColor(.black)
                     .font(.footnote)
                 
                 Text("YMCA Floyd County, New Albany")
-                    .color(.white)
+                    .foregroundColor(.white)
                     .font(.headline)
                     .fontWeight(.regular)
                     .lineLimit(nil)
@@ -64,14 +72,14 @@ struct SingleClassCard : View {
                     Text("TODAY")
                         .font(.caption)
                         .fontWeight(.heavy)
-                        .color(Color("Purple1"))
+                        .foregroundColor(Color("Purple1"))
                         .padding(4)
                         .background(Color.white)
                         .cornerRadius(4)
                         .frame(minWidth:0)
                     Text("12:00")
                         .font(.callout)
-                        .color(.white)
+                        .foregroundColor(.white)
                 }
             }
                 
