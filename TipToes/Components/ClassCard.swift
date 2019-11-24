@@ -56,6 +56,8 @@ struct SingleClassCard : View {
                 .clipShape(Rectangle())
                 .blendMode(.overlay)
             
+            // Adding some text here for the commit.
+            
             VStack(alignment: .leading) {
                 
                 Text("Teaching Barre at:")
