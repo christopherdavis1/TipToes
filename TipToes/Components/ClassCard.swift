@@ -14,7 +14,7 @@ struct ClassCard: View {
         
         // Card Wrapper
         Group {
-            ClassCardComponent(locationImage: "locationImagePlaceholder", classType: "Barre Class", classColor: "Purple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
+            ClassCardComponent(locationImage: "locationImagePlaceholder", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
         }
     }
 }
@@ -34,6 +34,7 @@ struct ClassCardComponent: View {
     var locationImage: String
     var classType: String
     var classColor: String
+    var classShadowColor: String
     var className: String
     var classDate: String
     var classTime: String
@@ -70,7 +71,7 @@ struct ClassCardComponent: View {
                         .padding(4)
                         .padding(.horizontal, 6)
                         .background(Color.white)
-                        .foregroundColor(Color("Purple1"))
+                        .foregroundColor(Color(classColor))
                         .cornerRadius(4)
                 }
                 .padding()
@@ -80,7 +81,7 @@ struct ClassCardComponent: View {
         .frame(width: 285, alignment: .top)
         .clipped()
         .background(Color(classColor))
-        .shadow(color: Color("ShadowPurple1"), radius: 4, x: 2, y: 4)
         .cornerRadius(12)
+        .shadow(color: Color(classShadowColor), radius: 4, x: 2, y: 4)
     }
 }
