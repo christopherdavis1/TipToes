@@ -15,11 +15,11 @@ struct HorizontalClassScroll: View {
             
             // Horizontal Scrollview of Classes
             HStack {
-                ClassCardComponent(locationImage: "locationImagePlaceholder", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
+                ClassCardComponent(locationImage: "image-NAYMCA", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
                 
-                ClassCardComponent(locationImage: "locationImagePlaceholder", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
+                ClassCardComponent(locationImage: "image-NortheastYMCA", classType: "Barre Class", classColor: "Pink2", classShadowColor: "ShadowPink2", className: "Northeast YMCA, Lyndon", classDate: "Wednesdays", classTime: "6:30PM")
                 
-                ClassCardComponent(locationImage: "locationImagePlaceholder", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
+                ClassCardComponent(locationImage: "image-TheWell", classType: "Barre Class", classColor: "Green1", classShadowColor: "ShadowGreen1", className: "The Wel at Humana", classDate: "Thursdays", classTime: "8:00AM")
             }
             .padding()
         }

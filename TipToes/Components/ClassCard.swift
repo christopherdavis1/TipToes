@@ -14,7 +14,8 @@ struct ClassCard: View {
         
         // Card Wrapper
         Group {
-            ClassCardComponent(locationImage: "locationImagePlaceholder", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
+            ClassCardComponent(locationImage: "image-NAYMCA", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
+
         }
     }
 }
@@ -48,8 +49,14 @@ struct ClassCardComponent: View {
                 // Location Image
                 Image(locationImage)
                     .resizable()
-                    .frame(width: 285, height: 100, alignment: .center)
-                    .scaledToFill()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 300, height: 100)
+                    .clipShape(Rectangle())
+                    .overlay(
+                        Rectangle()
+                            .opacity(0.5)
+                            .foregroundColor(Color(classColor))
+                    )
                     .padding(.bottom, -16)
                 
                 // Card Content
@@ -60,10 +67,12 @@ struct ClassCardComponent: View {
                         .padding(.vertical, 4)
                         .foregroundColor(Color("Text-Dark-semiAlpha"))
                     Text(className)
-                        .font(.title)
                         .lineLimit(3)
+                        .font(.title)
                         .foregroundColor(Color.white)
                         .padding(.bottom, 12)
+                    
+                    Spacer()
                     
                     // Date and time
                     Text("\(classDate) at \(classTime)")
@@ -78,7 +87,7 @@ struct ClassCardComponent: View {
             }
             
         }
-        .frame(width: 285, alignment: .top)
+        .frame(width: 285, height: 275)
         .clipped()
         .background(Color(classColor))
         .cornerRadius(12)
