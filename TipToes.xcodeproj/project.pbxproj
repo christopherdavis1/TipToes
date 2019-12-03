@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		831948BE23961FA20078AA3A /* ClassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831948BD23961FA20078AA3A /* ClassCard.swift */; };
+		831948C12396365B0078AA3A /* HorizontalClassScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831948C02396365B0078AA3A /* HorizontalClassScroll.swift */; };
 		83266FA322D70D6E004BCE12 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83266FA222D70D6E004BCE12 /* Home.swift */; };
 		83266FA522D70D8C004BCE12 /* ClassDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83266FA422D70D8C004BCE12 /* ClassDetailView.swift */; };
 		83D742C722CFB673008247C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D742C622CFB673008247C0 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		831948BD23961FA20078AA3A /* ClassCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCard.swift; sourceTree = "<group>"; };
+		831948C02396365B0078AA3A /* HorizontalClassScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalClassScroll.swift; sourceTree = "<group>"; };
 		83266FA222D70D6E004BCE12 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		83266FA422D70D8C004BCE12 /* ClassDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailView.swift; sourceTree = "<group>"; };
 		83D742C322CFB673008247C0 /* TipToes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipToes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		831948BF239636350078AA3A /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				831948C02396365B0078AA3A /* HorizontalClassScroll.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
 		83266FA122D70D59004BCE12 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 				83D742CA22CFB673008247C0 /* ContentView.swift */,
 				83266FA422D70D8C004BCE12 /* ClassDetailView.swift */,
 				83266FA122D70D59004BCE12 /* Components */,
+				831948BF239636350078AA3A /* Elements */,
 				83D742CC22CFB676008247C0 /* Assets.xcassets */,
 				83D742D122CFB676008247C0 /* LaunchScreen.storyboard */,
 				83D742D422CFB676008247C0 /* Info.plist */,
@@ -163,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831948C12396365B0078AA3A /* HorizontalClassScroll.swift in Sources */,
 				83266FA522D70D8C004BCE12 /* ClassDetailView.swift in Sources */,
 				83D742C722CFB673008247C0 /* AppDelegate.swift in Sources */,
 				831948BE23961FA20078AA3A /* ClassCard.swift in Sources */,

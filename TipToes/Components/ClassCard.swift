@@ -83,5 +83,6 @@ struct ClassCardComponent: View {
         .background(Color(classColor))
         .cornerRadius(12)
         .shadow(color: Color(classShadowColor), radius: 4, x: 2, y: 4)
+        .padding(8)
     }
 }
