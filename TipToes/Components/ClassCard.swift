@@ -67,7 +67,7 @@ struct ClassCardComponent: View {
                     
                     // Date and time
                     Text("\(classDate) at \(classTime)")
-                        .font(.system(size: 14, weight: .medium, design: .default))
+                        .font(.system(size: 15, weight: .semibold, design: .default))
                         .padding(4)
                         .padding(.horizontal, 6)
                         .background(Color.white)
