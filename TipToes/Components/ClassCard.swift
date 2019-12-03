@@ -1,98 +1,64 @@
 //
-//  ClassCard.swift
+//  SwiftUIView.swift
 //  TipToes
 //
-//  Created by Christopher Davis on 7/11/19.
+//  Created by Christopher Davis on 12/2/19.
 //  Copyright © 2019 Curious Friends Club. All rights reserved.
 //
 
 import SwiftUI
 
-struct ClassCard : View {
-    
-    @State var ShowClassCard = false
-    
+struct ClassCard: View {
     var body: some View {
         
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 16.0) {
-                ForEach(0 ..< 3) { item in
+        // Card Wrapper
+        Group {
+            
+            VStack {
+                
+                // Location Image
+                Image("locationImagePlaceholder")
+                    .resizable()
+                    .frame(width: 285, height: 100, alignment: .center)
+                    .scaledToFill()
+                    .padding(.bottom, -16)
+                
+                // Card Content
+                VStack(alignment: .leading) {
+                    Text("Barre class")
+                        .font(.callout)
+                        .fontWeight(.medium)
+                        .padding(.vertical, 4)
+                        .foregroundColor(Color("Text-Dark-semiAlpha"))
+                    Text("YMCA Floyd County, New Albany")
+                        .font(.title)
+                        .lineLimit(3)
+                        .foregroundColor(Color.white)
+                        .padding(.bottom, 12)
                     
-                    Button(action: { self.ShowClassCard.toggle() }) {
-                        SingleClassCard()
-                    }
-                    
-//                    PresentationLink(destination: ClassDetailView()) {
-//                        SingleClassCard()
-//                    }
-                }.sheet(isPresented: $ShowClassCard) { ClassDetailView() }
+                    // Date and time
+                    Text("Today at 12:00PM")
+                        .font(.system(size: 14, weight: .bold, design: .default))
+                        .padding(4)
+                        .padding(.horizontal, 6)
+                        .background(Color.white)
+                        .foregroundColor(Color("Purple1"))
+                        .cornerRadius(4)
+                }
+                .padding()
             }
-            .padding(.leading, 32)
-            .padding(.trailing)
+            
         }
-        
+        .frame(width: 285, alignment: .top)
+        .clipped()
+        .background(Color("Purple1"))
+        .cornerRadius(12)
+        .shadow(color: Color("ShadowPurple1"), radius: 4, x: 2, y: 4)
     }
 }
 
-#if DEBUG
-struct ClassCard_Previews : PreviewProvider {
+struct ClassCard_Previews: PreviewProvider {
     static var previews: some View {
         ClassCard()
-            .previewDevice("iPhone XS Max")
-    }
-}
-#endif
-
-
-
-struct SingleClassCard : View {
-    var body: some View {
-        return VStack {
-            
-            Image("locationImagePlaceholder")
-                .resizable()
-                .frame(width: 285, height: 105)
-                .aspectRatio(contentMode: .fill)
-                .clipShape(Rectangle())
-                .blendMode(.overlay)
-            
-            // Adding some text here for the commit.
-            
-            VStack(alignment: .leading) {
-                
-                Text("Teaching Barre at:")
-                    .foregroundColor(.black)
-                    .font(.footnote)
-                
-                Text("YMCA Floyd County, New Albany")
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .fontWeight(.regular)
-                    .lineLimit(nil)
-                
-                HStack {
-                    Text("TODAY")
-                        .font(.caption)
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color("Purple1"))
-                        .padding(4)
-                        .background(Color.white)
-                        .cornerRadius(4)
-                        .frame(minWidth:0)
-                    Text("12:00")
-                        .font(.callout)
-                        .foregroundColor(.white)
-                }
-            }
-                
-                .padding(.top, 8)
-            
-            Spacer()
-        }
-        .frame(width: 285, height: 235)
-            .background(Color("Purple1"))
-            .cornerRadius(16)
-            .shadow(radius: 4)
-            .shadow(color: Color("Grey1"), radius: 10, x: 0, y: 4)
     }
 }
