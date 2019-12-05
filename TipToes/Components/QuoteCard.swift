@@ -14,10 +14,6 @@ struct QuoteCard: View {
         // Quote Card
         VStack {
             QuoteCardComponent(quoteImage: "AlanWatts1", quoteBody: "No valid plans for the future can be made by those who have no capacity for living now.", quoteAttribution: "Alan Watts")
-            
-            QuoteCardComponent(quoteImage: "AlanWatts2", quoteBody: "What the devil is the point of surviving, going on living, when it's a drag? But you see, that's what people do.", quoteAttribution: "Alan Watts")
-            
-            QuoteCardComponent(quoteImage: "AlanWatts3", quoteBody: "The reason we want to go on and on is because we live in an impoverished present.", quoteAttribution: "Alan Watts")
         }
     }
 }
@@ -43,7 +39,7 @@ struct QuoteCardComponent: View {
         
         Group {
             VStack {
-                Group {
+                VStack(alignment: .center) {
                     Image(quoteImage)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -67,17 +63,19 @@ struct QuoteCardComponent: View {
                                 .foregroundColor(Color.white)
                     )
                 }
-                .frame(width: 344, height: 126, alignment: .center)
+                .frame(width: 344, height: 120, alignment: .center)
                 .clipped()
                 
                 VStack(alignment: .leading) {
                     Text(quoteBody)
                         .font(.system(size: 22))
-                        .lineLimit(8)
+                        .foregroundColor(Color.black)
                         .padding(.top, 8)
                         .padding(.bottom, 8)
+                        .lineLimit(8)
                         
                     Text(quoteAttribution)
+                    .foregroundColor(Color.gray)
                     .font(.callout)
                     .fontWeight(.bold)
                 }
@@ -86,41 +84,11 @@ struct QuoteCardComponent: View {
                 .padding(.bottom, 24)
             }
         }
-        .frame(width: 344)
+//        .frame(width: 344)
+            .frame(minWidth: 344, maxWidth: 344, minHeight: 120, maxHeight: 300, alignment: .top)
         .background(Color.white)
         .cornerRadius(16)
         .shadow(color: Color("Grey3Shadow"), radius: 4, x: 2, y: 4)
+        .padding(8)
     }
 }
-
-
-
-//Rectangle()
-//            .foregroundColor(Color("Grey3"))
-//            .opacity(0.9)
-//            .overlay(
-//                VStack(alignment: .leading) {
-//                    HStack{
-//                        Image(systemName: "quote.bubble.fill")
-//                        Text("quote")
-//                            .padding(.bottom, 8)
-//                            .font(.callout)
-//                    }
-//                    .opacity(0.75)
-//
-//                    Text(quoteBody)
-//                        .font(.system(size: 22, weight: .regular))
-//                        .lineLimit(8)
-//                        .padding(.bottom, 12)
-//
-//                    Text(quoteAttribution)
-//                        .font(.caption)
-//                        .fontWeight(.bold)
-//                }
-//                .foregroundColor(Color.white)
-//                .padding(.bottom, 8)
-//                .padding(),
-//
-//                alignment: .leading
-//        )
-//)

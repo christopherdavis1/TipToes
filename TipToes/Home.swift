@@ -44,7 +44,7 @@ struct Home : View {
                         .background(Color.blue)
                         .cornerRadius(8)
                 }.sheet(isPresented: self.$showQuoteCard) {
-                    QuoteCard()
+                    ClassDetailView()
                 }
             }
         }

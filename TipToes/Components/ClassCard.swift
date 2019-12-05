@@ -50,7 +50,7 @@ struct ClassCardComponent: View {
                 Image(locationImage)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 300, height: 100)
+                    .frame(width: 344, height: 120)
                     .clipShape(Rectangle())
                     .overlay(
                         Rectangle()
@@ -87,7 +87,7 @@ struct ClassCardComponent: View {
             }
             
         }
-        .frame(width: 285, height: 275)
+        .frame(width: 344, height: 275)
         .clipped()
         .background(Color(classColor))
         .cornerRadius(12)

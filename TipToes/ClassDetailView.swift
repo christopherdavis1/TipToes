@@ -25,6 +25,10 @@ struct ClassDetailView : View {
             .padding(.top, 8)
             
             Spacer()
+            
+            HorizontalQuoteScroll()
+            
+            Spacer()
         }
     }
 }
