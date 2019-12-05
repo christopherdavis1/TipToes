@@ -11,19 +11,41 @@ import SwiftUI
 struct Home : View {
     
     @State var showContentView = false
+    @State var showQuoteCard = false
     
     var body: some View {
-        Button(action: {self.showContentView.toggle() }) {
-            VStack {
-                Text("Launch Week View")
-                    .font(.callout)
-                    .foregroundColor(.white)
-                    .padding()
-                    .padding(.horizontal)
-                    .background(Color.blue)
-                    .cornerRadius(8)
-            }.sheet(isPresented: self.$showContentView) {
-                ContentView()
+        
+        VStack {
+            
+            // Quote Card Button
+            Button(action: {self.showContentView.toggle() }) {
+                Group {
+                    Text("Launch Class Locations")
+                        .font(.callout)
+                        .foregroundColor(.white)
+                        .padding()
+                        .padding(.horizontal)
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }.sheet(isPresented: self.$showContentView) {
+                    ContentView()
+                }
+            }
+            .padding()
+            
+            // Quote Card Button
+            Button(action: {self.showQuoteCard.toggle() }) {
+                Group {
+                    Text("Launch Quote Card")
+                        .font(.callout)
+                        .foregroundColor(.white)
+                        .padding()
+                        .padding(.horizontal)
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }.sheet(isPresented: self.$showQuoteCard) {
+                    QuoteCard()
+                }
             }
         }
     }
@@ -33,7 +55,6 @@ struct Home : View {
 struct Home_Previews : PreviewProvider {
     static var previews: some View {
         Home()
-            .previewDevice("iPhone XS Max")
     }
 }
 #endif
