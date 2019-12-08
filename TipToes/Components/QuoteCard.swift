@@ -84,8 +84,8 @@ struct QuoteCardComponent: View {
                 .padding(.bottom, 24)
             }
         }
-//        .frame(width: 344)
-            .frame(minWidth: 344, maxWidth: 344, minHeight: 120, maxHeight: 300, alignment: .top)
+        .frame(width: 344)
+//            .frame(minWidth: 344, maxWidth: 344, minHeight: 120, maxHeight: 300, alignment: .top)
         .background(Color.white)
         .cornerRadius(16)
         .shadow(color: Color("Grey3Shadow"), radius: 4, x: 2, y: 4)
