@@ -19,6 +19,7 @@
 		83D742CD22CFB676008247C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D742CC22CFB676008247C0 /* Assets.xcassets */; };
 		83D742D022CFB676008247C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D742CF22CFB676008247C0 /* Preview Assets.xcassets */; };
 		83D742D322CFB676008247C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D742D122CFB676008247C0 /* LaunchScreen.storyboard */; };
+		83EC69B523A6A0B7006AE36F /* InstructorAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EC69B423A6A0B7006AE36F /* InstructorAvatar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		83D742CF22CFB676008247C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83D742D222CFB676008247C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83D742D422CFB676008247C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83EC69B423A6A0B7006AE36F /* InstructorAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorAvatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				831948BD23961FA20078AA3A /* ClassCard.swift */,
 				83CFE62B2398A51700686246 /* QuoteCard.swift */,
+				83EC69B423A6A0B7006AE36F /* InstructorAvatar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				83266FA322D70D6E004BCE12 /* Home.swift in Sources */,
 				83D742CB22CFB673008247C0 /* ContentView.swift in Sources */,
 				83CFE62E2398C9E900686246 /* HorizontalQuoteScroll.swift in Sources */,
+				83EC69B523A6A0B7006AE36F /* InstructorAvatar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

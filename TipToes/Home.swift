@@ -17,6 +17,9 @@ struct Home : View {
         
         VStack {
             
+            // Avatar
+            AvatarComponent(instructorPhoto: "Meghan2")
+            
             // Quote Card Button
             Button(action: {self.showContentView.toggle() }) {
                 Group {
