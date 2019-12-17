@@ -56,7 +56,12 @@ struct Home : View {
                     ClassDetailView()
                 }
             }
+            
+            Spacer()
+            
         }
+        .background(Color.white)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
