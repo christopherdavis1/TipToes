@@ -18,7 +18,13 @@ struct Home : View {
         VStack {
             
             // Avatar
-            AvatarComponent(instructorPhoto: "Meghan2")
+            ZStack(alignment: .center) {
+                WeekDetail()
+                    .padding(.top, 175)
+                AvatarComponent(instructorPhoto: "Meghan2")
+            }
+            
+            Spacer()
             
             // Quote Card Button
             Button(action: {self.showContentView.toggle() }) {
