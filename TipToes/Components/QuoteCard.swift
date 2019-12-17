@@ -68,11 +68,11 @@ struct QuoteCardComponent: View {
                 
                 VStack(alignment: .leading) {
                     Text(quoteBody)
-                        .font(.system(size: 22))
+                        .font(.system(size: 20))
+                        .fixedSize(horizontal: false, vertical: true)
                         .foregroundColor(Color.black)
                         .padding(.top, 8)
                         .padding(.bottom, 8)
-                        .lineLimit(8)
                         
                     Text(quoteAttribution)
                     .foregroundColor(Color.gray)
@@ -85,7 +85,6 @@ struct QuoteCardComponent: View {
             }
         }
         .frame(width: 344)
-//            .frame(minWidth: 344, maxWidth: 344, minHeight: 120, maxHeight: 300, alignment: .top)
         .background(Color.white)
         .cornerRadius(16)
         .shadow(color: Color("Grey3Shadow"), radius: 4, x: 2, y: 4)

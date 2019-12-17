@@ -14,7 +14,7 @@ struct HorizontalClassScroll: View {
         ScrollView(.horizontal, showsIndicators: false) {
             
             // Horizontal Scrollview of Classes
-            HStack(alignment: .top) {
+            HStack(alignment: .top, spacing: 16.0) {
                 ClassCardComponent(locationImage: "image-NAYMCA", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
                 
                 ClassCardComponent(locationImage: "image-NortheastYMCA", classType: "Barre Class", classColor: "Pink2", classShadowColor: "ShadowPink2", className: "Northeast YMCA, Lyndon", classDate: "Wednesdays", classTime: "6:30PM")
