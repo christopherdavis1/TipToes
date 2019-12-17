@@ -14,8 +14,15 @@ struct ClassCard: View {
         
         // Card Wrapper
         Group {
-            ClassCardComponent(locationImage: "image-NAYMCA", classType: "Barre Class", classColor: "Purple1", classShadowColor: "ShadowPurple1", className: "YMCA Floyd County, New Albany", classDate: "Today", classTime: "12:00PM")
-
+            ClassCardComponent(
+                locationImage: "image-NAYMCA",
+                classType: "Barre Class",
+                classColor: "Purple1",
+                classShadowColor: "ShadowPurple1",
+                className: "YMCA Floyd County, New Albany",
+                classDate: "Today",
+                classTime: "12:00PM"
+            )
         }
     }
 }
@@ -40,58 +47,52 @@ struct ClassCardComponent: View {
     var classDate: String
     var classTime: String
     
-    
     var body: some View {
-        VStack {
-            
-            VStack {
+        Group {
+            VStack(alignment: .leading) {
                 
-                // Location Image
+                // Class Image
                 Image(locationImage)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 344, height: 120)
-                    .clipShape(Rectangle())
+                    .frame(width: 285, height: 80, alignment: .center)
                     .overlay(
                         Rectangle()
-                            .opacity(0.5)
                             .foregroundColor(Color(classColor))
-                    )
-                    .padding(.bottom, -16)
+                            .opacity(0.75)
+                )
                 
-                // Card Content
+                // Class Info
                 VStack(alignment: .leading) {
                     Text(classType)
                         .font(.callout)
-                        .fontWeight(.medium)
-                        .padding(.vertical, 4)
-                        .foregroundColor(Color("Text-Dark-semiAlpha"))
+                        .foregroundColor(.black)
+                        .opacity(0.75)
+                        .padding(.bottom, 8)
+                    
                     Text(className)
-                        .lineLimit(3)
                         .font(.title)
-                        .foregroundColor(Color.white)
-                        .padding(.bottom, 12)
+                        .foregroundColor(.white)
+                        .padding(.bottom, 16)
                     
-                    Spacer()
-                    
-                    // Date and time
                     Text("\(classDate) at \(classTime)")
-                        .font(.system(size: 15, weight: .semibold, design: .default))
-                        .padding(4)
-                        .padding(.horizontal, 6)
-                        .background(Color.white)
+                        .font(.body)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color(classColor))
+                        .padding(.horizontal, 6.0)
+                        .padding(.vertical, 4.0)
+                        .background(Color(.white))
                         .cornerRadius(4)
+                    
                 }
-                .padding()
+                .padding(.horizontal)
+                .padding(.bottom)
+                
             }
-            
+            .frame(width: 285)
+            .background(Color(classColor))
+            .clipped()
+            .cornerRadius(16)
+            .shadow(color: Color(classShadowColor), radius: 4, x: 0, y: 4)
         }
-        .frame(width: 344, height: 275)
-        .clipped()
-        .background(Color(classColor))
-        .cornerRadius(12)
-        .shadow(color: Color(classShadowColor), radius: 4, x: 2, y: 4)
-        .padding(8)
     }
 }
