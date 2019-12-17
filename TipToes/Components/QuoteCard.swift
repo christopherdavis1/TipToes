@@ -36,58 +36,36 @@ struct QuoteCardComponent: View {
     var quoteAttribution: String
     
     var body: some View {
-        
         Group {
-            VStack {
-                VStack(alignment: .center) {
-                    Image(quoteImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .overlay(
-                            Rectangle()
-                                .foregroundColor(Color("Grey3"))
-                                .opacity(0.9)
-                                .overlay(
-                                    HStack {
-                                        Image(systemName: "quote.bubble.fill")
-                                        Text("quote of the week")
-                                            .font(.callout)
-                                            .fontWeight(.medium)
-                                            .padding(.bottom, 8)
-                                        Spacer()
-                                    }
-                                    .opacity(0.75)
-                                    .padding(.top, 80)
-                                    .padding(.leading)
-                            )
-                                .foregroundColor(Color.white)
-                    )
+            VStack(alignment: .leading) {
+                HStack {
+                    Image(systemName: "quote.bubble.fill")
+                        .padding(.top, 4)
+                    Text("quote")
+                        .font(.callout)
+                        .fontWeight(.semibold)
                 }
-                .frame(width: 344, height: 120, alignment: .center)
-                .clipped()
+                .padding(.bottom, 8)
+                .opacity(0.5)
                 
-                VStack(alignment: .leading) {
-                    Text(quoteBody)
-                        .font(.system(size: 20))
-                        .fixedSize(horizontal: false, vertical: true)
-                        .foregroundColor(Color.black)
-                        .padding(.top, 8)
-                        .padding(.bottom, 8)
-                        
-                    Text(quoteAttribution)
-                    .foregroundColor(Color.gray)
+                Text(quoteBody)
+                    .font(.system(size: 22))
+                    .foregroundColor(.primary)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.bottom, 12)
+                
+                Text(quoteAttribution)
                     .font(.callout)
                     .fontWeight(.bold)
-                }
-                .padding(.leading)
-                .padding(.trailing)
-                .padding(.bottom, 24)
             }
+            .padding(.horizontal, 18)
+            .padding(.vertical, 16)
+            .frame(width: 342.0)
+            .background(Color("Pink1"))
+            .foregroundColor(Color("Pink3"))
+            .cornerRadius(16)
+            .clipped()
         }
-        .frame(width: 344)
-        .background(Color.white)
-        .cornerRadius(16)
-        .shadow(color: Color("Grey3Shadow"), radius: 4, x: 2, y: 4)
-        .padding(8)
+        .shadow(color: Color("ShadowPink2"), radius: 4, x: 0, y: 2)
     }
 }

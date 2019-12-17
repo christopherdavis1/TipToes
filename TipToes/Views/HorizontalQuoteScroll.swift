@@ -12,7 +12,7 @@ struct HorizontalQuoteScroll: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             
-            HStack(alignment: .top) {
+            HStack(alignment: .top, spacing: 16.0) {
                 QuoteCardComponent(quoteImage: "AlanWatts1", quoteBody: "No valid plans for the future can be made by those who have no capacity for living now.", quoteAttribution: "Alan Watts")
                 
                 QuoteCardComponent(quoteImage: "AlanWatts2", quoteBody: "What the devil is the point of surviving, going on living, when it's a drag? But you see, that's what people do.", quoteAttribution: "Alan Watts")
