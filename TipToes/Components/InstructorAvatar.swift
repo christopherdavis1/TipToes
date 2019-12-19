@@ -55,7 +55,7 @@ struct AvatarComponent: View {
                 .animation(nil)
             
         }
-        .frame(width: 180, height: 180, alignment: .center)
+        .frame(width: 150, height: 150, alignment: .center)
         .onAppear() {
             withAnimation(Animation.default.repeatForever(autoreverses: false).speed(0.15)) {
                 self.isPulsing.toggle()

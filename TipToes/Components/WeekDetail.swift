@@ -36,16 +36,14 @@ struct WeekDetailView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            VStack {
+            VStack(alignment: .leading) {
                 Text(instructorMessage)
                     .italic()
                     .fixedSize(horizontal: false, vertical: true)
                     .foregroundColor(Color("Grey3"))
-                    .padding(.top, 16)
                     .padding()
                     .background(Color("Grey1"))
                     .cornerRadius(8)
-                    .multilineTextAlignment(.center)
                 
                 HStack(spacing: 20.0) {
                     HStack {
