@@ -53,7 +53,7 @@ struct ClassCardComponent: View {
             // Class Image
             Image(locationImage)
                 .resizable()
-                .frame(width: 285, height: 80)
+                .frame(height: 80)
                 .overlay(
                     Rectangle()
                         .foregroundColor(Color(classColor))
@@ -89,10 +89,10 @@ struct ClassCardComponent: View {
             .padding(.bottom)
             
         }
-        .frame(width: 285)
+        .frame(width: 352)
         .background(Color(classColor))
         .clipped()
-        .cornerRadius(16)
+        .cornerRadius(12)
         .shadow(color: Color(classShadowColor), radius: 4, x: 0, y: 4)
     }
 }

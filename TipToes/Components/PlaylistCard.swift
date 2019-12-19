@@ -18,9 +18,8 @@ struct PlaylistCard: View {
                     HStack {
                         HStack {
                             Image(systemName: "music.note")
-                                .font(.system(size: 14))
                             Text("music")
-                                .font(.footnote)
+                                .font(.callout)
                                 .fontWeight(.semibold)
                         }
                         .foregroundColor(Color.white)
@@ -30,10 +29,10 @@ struct PlaylistCard: View {
                         
                         Image("spotifyIcon")
                     }
-                    .padding(.bottom, -8)
+                    .padding(.bottom, -16)
                     
                     Text("Playlists")
-                        .font(.title)
+                        .font(.largeTitle)
                         .foregroundColor(Color.white)
                 }
                 
@@ -66,8 +65,8 @@ struct PlaylistCard: View {
         .padding(.vertical)
         .padding(.bottom, 8)
         .background(Color("Green1"))
-        .frame(width: 342)
-        .cornerRadius(16)
+        .frame(width: 352)
+        .cornerRadius(12)
         .shadow(color: Color("GreenShadow"), radius: 4, x: 0, y: 2)
     }
 }

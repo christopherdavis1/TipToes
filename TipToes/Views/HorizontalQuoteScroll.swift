@@ -25,7 +25,7 @@ struct HorizontalQuoteScroll: View {
                     
                     QuoteCardComponent(quoteImage: "AlanWatts2", quoteBody: "What the devil is the point of surviving, going on living, when it's a drag? But you see, that's what people do.", quoteAttribution: "Alan Watts")
                 }
-                .padding()
+                .padding(.horizontal, 28)
                 .padding(.bottom, 16)
             }
             

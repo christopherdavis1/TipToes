@@ -46,11 +46,11 @@ struct QuoteCardComponent: View {
                         .fontWeight(.semibold)
                 }
                 .padding(.bottom, 8)
-                .opacity(0.5)
+                .opacity(0.75)
                 
                 Text(quoteBody)
                     .font(.system(size: 22))
-                    .foregroundColor(.primary)
+                    .foregroundColor(Color.white)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.bottom, 12)
                 
@@ -60,10 +60,10 @@ struct QuoteCardComponent: View {
             }
             .padding(.horizontal, 18)
             .padding(.vertical, 16)
-            .frame(width: 342.0)
-            .background(Color("Pink1"))
-            .foregroundColor(Color("Pink3"))
-            .cornerRadius(16)
+            .frame(width: 352)
+            .background(Color("Pink4"))
+            .foregroundColor(Color.white)
+            .cornerRadius(12)
             .clipped()
         }
         .shadow(color: Color("ShadowPink2"), radius: 4, x: 0, y: 2)
