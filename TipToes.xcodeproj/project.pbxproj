@@ -12,6 +12,7 @@
 		831FDDC323A8A571009A1B0C /* WeekDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FDDC223A8A571009A1B0C /* WeekDetail.swift */; };
 		83266FA322D70D6E004BCE12 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83266FA222D70D6E004BCE12 /* Home.swift */; };
 		83266FA522D70D8C004BCE12 /* ClassDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83266FA422D70D8C004BCE12 /* ClassDetailView.swift */; };
+		8332C39F23AB1B3400500A00 /* PlaylistCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8332C39E23AB1B3400500A00 /* PlaylistCard.swift */; };
 		83CFE62C2398A51700686246 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CFE62B2398A51700686246 /* QuoteCard.swift */; };
 		83CFE62E2398C9E900686246 /* HorizontalQuoteScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CFE62D2398C9E900686246 /* HorizontalQuoteScroll.swift */; };
 		83D742C722CFB673008247C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D742C622CFB673008247C0 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		831FDDC223A8A571009A1B0C /* WeekDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDetail.swift; sourceTree = "<group>"; };
 		83266FA222D70D6E004BCE12 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		83266FA422D70D8C004BCE12 /* ClassDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailView.swift; sourceTree = "<group>"; };
+		8332C39E23AB1B3400500A00 /* PlaylistCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCard.swift; sourceTree = "<group>"; };
 		83CFE62B2398A51700686246 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
 		83CFE62D2398C9E900686246 /* HorizontalQuoteScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalQuoteScroll.swift; sourceTree = "<group>"; };
 		83D742C322CFB673008247C0 /* TipToes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipToes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				83CFE62B2398A51700686246 /* QuoteCard.swift */,
 				83EC69B423A6A0B7006AE36F /* InstructorAvatar.swift */,
 				831FDDC223A8A571009A1B0C /* WeekDetail.swift */,
+				8332C39E23AB1B3400500A00 /* PlaylistCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				83D742C922CFB673008247C0 /* SceneDelegate.swift in Sources */,
 				83266FA322D70D6E004BCE12 /* Home.swift in Sources */,
 				83D742CB22CFB673008247C0 /* ContentView.swift in Sources */,
+				8332C39F23AB1B3400500A00 /* PlaylistCard.swift in Sources */,
 				83CFE62E2398C9E900686246 /* HorizontalQuoteScroll.swift in Sources */,
 				83EC69B523A6A0B7006AE36F /* InstructorAvatar.swift in Sources */,
 			);
