@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ClassDetailView : View {
+    
     var body: some View {
         
         // Top Wrapper
@@ -34,6 +35,8 @@ struct ClassDetailView : View {
                         Spacer()
                         
                         InstructorAvatar()
+                            
+                            
                     }
                     .padding(.bottom, -50)
                     
@@ -64,6 +67,7 @@ struct ClassDetailView : View {
                 .padding(.vertical, 16)
             }
         }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
