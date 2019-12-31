@@ -35,9 +35,8 @@ struct ClassDetailView : View {
                         Spacer()
                         
                         InstructorAvatar()
-                            
-                            
                     }
+                    .zIndex(1)
                     .padding(.bottom, -50)
                     
                     // Weekly Detail
@@ -60,12 +59,14 @@ struct ClassDetailView : View {
                 //END CLASSES
                 
                 // START Week Content
-                VStack {
+                VStack(alignment: .center) {
                     PlaylistCard()
                     QuoteCard()
                 }
                 .padding(.vertical, 16)
+                .padding(.bottom, 16)
             }
+            .frame(width: UIScreen.main.bounds.size.width)
         }
         .edgesIgnoringSafeArea(.all)
     }

@@ -114,12 +114,6 @@ struct PlaylistItemRow: View {
                     .cornerRadius(100)
             }
             .foregroundColor(Color.white)
-            
-            //            Rectangle()
-            //                .frame(height: 1)
-            //                .padding(.vertical, 8)
-            //                .foregroundColor(.white)
-            //                .opacity(0.25)
         }
     }
 }
