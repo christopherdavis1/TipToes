@@ -52,7 +52,6 @@ struct AvatarComponent: View {
                 .overlay(
                     Circle().stroke(Color.white, lineWidth: 4))
                 .shadow(color: Color("Grey3Shadow"), radius: 4, x: 0, y: 3)
-                .animation(nil)
             
         }
         .frame(width: 150, height: 150, alignment: .center)
